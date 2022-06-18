@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biscoff Bakery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+    <body>
+
+        <nav id="page-header" class="navbar navbar-expand-lg bg-light">
+
+            <div class="container">
+
+                <figure class="mr-3">
+                    <img src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" />
+                    <figcaption><a class="navbar-brand" href="#">Biscoff Bakery</a></figcaption>
+                </figure>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./bakery.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./bakedgoods.html">Baked Goods</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./contact1.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        
+        </nav>
+        <!--Start of Content, div class name is same as other pages-->
+        <main class="constrained-full-height">
+            <!--Create ID for "About" page -->
+            <div id="page-about">
+                <!--Created parent div to apply container-->
+                <div class="container">
+                    <!--Create another parent div for container styling-->
+                    <div class="row gx-3 justify-content-between">
+                        <!--Child 1 Container-->
+                        <div class="col">
+                            <!--Child 1 = Background Image-->
+                            <div class="bg-section constrained-full-height"></div>
+                        </div>
+                        <!--Child 2 Container-->
+                        <div class="col about-content">
+                            <!--Child 2 = Content section-->
+                            <h1 class="mb-3 mt-5 text-center">About</h1>
+                            <div class="mb-5 hr"></div>
+                            <p class="mb-4 about-content-section">Proin at semper velit, vitae viverra tortor. 
+                                Quisque enim nisi, lacinia nec ultricies quis, feugiat vel mauris. 
+                                Pellentesque sit amet felis ante. Sed ornare varius tortor, ac pulvinar 
+                                tortor viverra id. Donec dapibus ut massa tristique sagittis. 
+                                Fusce feugiat a nisl at vestibulum.
+                            </p>
+                            <p class="about-content-section">
+                                Vestibulum ante ipsum primis in 
+                                faucibus orci luctus et ultrices posuere cubilia curae; Quisque eget neque tellus. 
+                                Donec risus enim, vehicula ac faucibus in, tincidunt ut orci. 
+                                Quisque pellentesque lacinia blandit. Proin in elit nec velit interdum dignissim. 
+                                Vivamus ac vestibulum sapien.
+                            </p>
+                        </div>
+                    </div>
+            
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer id="page-footer">
+            <div class="container">
+                <p>Biscoff Bakery | 79 Anson Road, #20-01</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
+  
+    </body>
+
+</html>

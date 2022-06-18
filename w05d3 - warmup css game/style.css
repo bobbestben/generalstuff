@@ -1,0 +1,23 @@
+/* #list-things-todo ul {
+    list-style-type: none;
+}
+
+#list-things-todo li {
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+#list-things-todo li:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.pending {
+    background: skyblue;
+}
+
+.done {
+    background: pink;
+} */

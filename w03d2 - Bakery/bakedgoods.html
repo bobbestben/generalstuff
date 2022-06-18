@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biscoff Bakery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+    <body>
+
+        <nav id="page-header" class="navbar navbar-expand-lg bg-light">
+
+            <div class="container">
+
+                <figure class="mr-3">
+                    <img src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" />
+                    <figcaption><a class="navbar-brand" href="#">Biscoff Bakery</a></figcaption>
+                </figure>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./bakery.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./bakedgoods.html">Baked Goods</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./contact1.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        
+        </nav>
+        <!--Start of Content, div class name is same as other pages-->
+        <main class="constrained-full-height">
+            <!--Create ID for "About" page -->
+            <div id="page-baked-goods">
+                <!--Created parent div to apply container-->
+                <div class="container">
+                    <h1 class="text-center p-4 baked-goods-header">Baked Goods</h1>
+                    <!--Create another parent div for container styling-->
+                    <div class="d-flex flex-wrap flex-row justify-content-between baked-goods-menu">
+                        <div class="food-item-one">
+                            <img class="img-one" src="./img/lemon-cake.png" srcset="./img/lemon-cake.png 1x, ./img/lemon-cake@2x.png 2x" />
+                            <p>Lemon Chiffon Cake</p>
+                            <p>$28.99</p>
+                        </div>
+                        <div class="food-item-two">
+                            <img class="img-one" src="./img/lemon-cake.png" srcset="./img/choco-pie.png 1x, ./img/choco-pie@2x.png 2x" />
+                            <p">Biscoff Choco Custard Pie</p>
+                            <p>$3.99</p>
+                        </div>
+                        <div class="food-item-three">
+                            <img class="img-one" src="./img/lemon-cake.png" srcset="./img/apple-pie.png 1x, ./img/apple-pie@2x.png 2x" />
+                            <p>Apple Pie</p>
+                            <p>$3.99</p>
+                        </div>
+                    </div>
+                        
+                        <!-- <div class="col">
+                            <div class="food-item-three" ></div>
+                            <img class="img-one" src="./img/lemon-cake.png" srcset="./img/lemon-cake.png 1x, ./img/lemon-cake@2x.png 2x" />
+                        </div>
+
+                    </div> -->
+                    <!-- <div class="d-flex flex-wrap justify-content-between baked-goods-menu">
+                        <div class="food-item-one constrained-full-height"></div>
+                        <div class="food-item-two constrained-full-height">asd</div>
+                        <div class="food-item-three constrained-full-height">asd</div>
+                    </div> -->
+
+            
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer id="page-footer">
+            <div class="container">
+                <p>Biscoff Bakery | 79 Anson Road, #20-01</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
+  
+    </body>
+
+</html>

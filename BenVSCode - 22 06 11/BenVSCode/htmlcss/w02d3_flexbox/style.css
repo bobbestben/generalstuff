@@ -1,0 +1,15 @@
+.parent-container {
+    display: flex;
+    background: gray;
+}
+
+.boot {
+    size: 50%;
+}
+/* .parent-left-container {
+    display: flex;
+}
+
+.parent-right-container {
+    display: flex;
+} */

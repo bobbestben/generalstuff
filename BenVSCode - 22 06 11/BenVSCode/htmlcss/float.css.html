@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <head>
+        <title>My Blog</title> <!--title of my blog-->
+
+        <link rel="stylesheet" href='./style.css'/> <!--linking your external stylesheet-->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+
+        <style> 
+        /*local style will take precedence over external style.css sheet */
+        /*you can use color: blue !important; to overwrite but discouraged */
+        /*is generally better to put styles in separate style sheet*/
+        /*generally easier to debug*/
+        
+
+            
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            <header id="page-header"> <!--giving ID to parent element-->
+                <!--give parent specific ID, specific and easy to call child elements-->
+                <!--inline style-->
+                <h1>Welcome to My Blog</h1>
+                <figure> <!--figure is a block element-->
+                    <!--Relative file path when we use "./", is relative to location of this html file-->
+                    <!--Absolute file path means full path for the file-->
+                    <img src="./lion2.jpg" />
+                </figure>
+            </header>
+        </div>
+
+        <nav id="page-nav"> <!--div also fine, but nav more specific as have links-->
+            <h2>Navigation</h2>
+            <ul>
+                <!-- href="link" target="new tab, etc."-->
+                <li><a href="https://google.com" target="_blank">Home</a></li> 
+                <li><a href="https://google.com" target="_blank">About</a></li>
+            </ul>
+        </nav>
+
+        <section id="articles-section">
+            <h2>Articles</h2>
+
+            <article>
+                <h3>Article 1</h3>
+                <p>Some Text about Article 1</p>
+            </article>
+
+            <article>
+                <h3>Article 2</h3>
+                <p>Some Text about Article 2</p>
+            </article>
+        </section>
+
+        <footer>
+            <h4>Footer Links</h4>
+            <ol>
+                <li>Privacy</li>
+                <li>Legal</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+            </ol>
+        </footer>
+    </body>
+
+</html>

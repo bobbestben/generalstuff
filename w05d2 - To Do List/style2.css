@@ -1,0 +1,23 @@
+.list ul {
+    list-style-type: none;
+}
+
+.list li {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    
+}
+
+.list li.pending {
+    background: skyblue;
+}
+
+.list li.done {
+    background: pink ;
+}
+
+#quote {
+    border-bottom: 1px solid gray;
+}

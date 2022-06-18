@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+    <title>DotA2 Team Information</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="container"></div>
+        <h2 class="text-center mt-3">Find DotA2 team information here!</h1>
+        <p class="text-center m-5">This website generates a <b>random team</b> with some info
+            of their <b>most played Heroes</b> and <b>their respective ID</b>. Use the ID in <i>search</i> below
+            to find out which heroes are good against them
+        </p>
+        
+        <div class="d-flex flex-column align-items-center">
+            <img src="" alt="" class="random-team mb-4">
+            <p class="team-name"><b>Team Name</b></p>
+            <p class="last-played">Last played</p>
+            <p class="strong-heroes"></p>
+        </div>
+
+        <p class="text-center">Enter <b>ID</b> below!</p>
+
+        <div class="d-flex justify-content-center m-auto search-bar">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Hero ID">
+            <button type="button" class="btn btn-dark">Search</button>
+        </div>
+
+        <h4 class="text-center mt-3 search-output"></h4>
+    <div>
+
+</body>
+</html>

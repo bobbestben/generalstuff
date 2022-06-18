@@ -1,0 +1,9 @@
+body {
+    min-width: 500px;
+}
+
+.search-bar {
+    width: 40%;
+    justify-content: center;
+
+}

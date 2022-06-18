@@ -1,0 +1,92 @@
+body {
+    background: rgb(214,214,223);
+    font-family: 'Cinzel', serif;
+    /* Can specify few font using comma, if 1st font unavailable, go to next font' */
+    /* Types of Font: Serif fonts (stylized, jagged) and san-serif(rounded) */
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: rgba(50,80,105,1);
+    text-align: center;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.wrapper {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page-header {
+    background: rgb(249,249,249);
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+
+#page-header h1 {   /*using a parent ID to call child elements*/
+    text-align: center; /*hover over the 'center' / 'text-align' to get help*/
+    font-size: 32px;
+}
+
+#page-header figure {
+    text-align: center;
+}
+
+#page-header figure img {
+    width: 40%;
+}
+
+nav h2 {
+    font-size: 28px;
+}
+
+nav ul {
+    font-size: 20px;
+}
+
+#page-nav {
+    background: rgb(249,239,239);
+    width: 1280px;
+    margin: 0px auto 0px auto;
+    padding: 20px 0px 10px 0px;
+    
+}
+
+#articles-section {
+    background: rgb(249,239,239);
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 10px 0px;
+}
+
+#articles-section article{
+    width: 900px;
+    background: rgb(249,249,249);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 20px 10px 10px 10px;
+}
+
+#articles-section article h3 {
+    color: pink;
+}
+
+footer {
+    background: rgb(249,249,249);
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 10px 0px;
+}
