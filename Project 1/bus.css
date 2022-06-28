@@ -1,3 +1,11 @@
-.bus-stop-info {
+.bus-stop-section {
     background-color: lightgray;
+}
+
+.bus-stop-info {
+    background-color: darkgray;
+}
+
+.bus-stop-info p {
+    font-size: 0.8em;
 }
