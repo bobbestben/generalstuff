@@ -3858,26 +3858,47 @@ const busStopSection = document.querySelector('.bus-stop-section')
 const busStopInfo_1 = document.querySelector('.bus-stop-section .bus-stop-info h5')
 const busStopInfo_2 = document.querySelector('.bus-stop-section .bus-stop-info p')
 const busStopError = document.querySelector('.bus-stop-section .error-no-bus-stop-found')
-const busArrivalSection = document.querySelector('.bus-stop-section bus-arrival-section')
+let storeSearchValue = null 
 
 const searchBtn = document.querySelector('.search-bar button')
+const refreshBtn = document.querySelector('.refresh-button svg')
 const input = document.querySelector('.search-bar input')
 const testing = document.querySelector('#testing')
 
-//Onclick - When user searches a bus stop no.
+//Search Button - on click
 searchBtn.onclick = function() {
+    console.log('search button clicked')
+    updateBusTiming()
+}
+
+//Refresh Button - on click
+refreshBtn.onclick = function() {
+    input.value = storeSearchValue
+    console.log('refresh-btn clicked')
+    updateBusTiming()
+    input.value = ""
+}
+
+//Function - to update bus timing and bus info
+const updateBusTiming = () => {
 
     //Clear error message if have from previous search
     busStopError.innerText = ""
 
     //Clear previous bus timings if have from previous search
-    console.log('busArrivalSection',busArrivalSection)
-    if (busArrivalSection) { busArrivalSection.remove() }
+    const busArrivalSection = document.querySelectorAll('.bus-stop-section .bus-arrival-section')
+    if (busArrivalSection) { busArrivalSection.forEach( element => {
+        element.remove()
+    }) }
+
+    busStopInfo_1.innerText = "Bus Stop Name"
+    busStopInfo_2.innerText = "Bus Stop No. / Street Name"
 
     let busArrivalUrl = "https://cors-anywhere.herokuapp.com/http://datamall2.mytransport.sg"+
         "ltaodataservice/BusArrivalv2?BusStopCode="
 
     //If search is empty, do nothing
+    storeSearchValue = input.value
     if (input.value === "") {
         return
      }
@@ -3912,7 +3933,7 @@ searchBtn.onclick = function() {
         //Update Bus Stop Arrival Times - loop through each bus number
         //Create parent row to contain | BusNo. | Time1 | Time2 | Time3 |
         const busArrivalSection = document.createElement('div')
-        busArrivalSection.setAttribute('class','row flex-nowrap mt-2 bus-arrival-section')
+        busArrivalSection.setAttribute('class','row flex-nowrap py-2 bus-arrival-section')
         
         //Bus Number - appent to parent row
         console.log('busNumber', dataBusArrival['Services'][j]['ServiceNo'])
