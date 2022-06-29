@@ -1,10 +1,32 @@
 Qn for Jonathan:
 
 Remove my previous bus search timing
+- give a class to my div
+- querySelectorAll - loop through
 
 How to make a scrollable bus timing within the page?
 Or how should i adjust my height
+- % height -- doesnt work
+- maybe not vh -- use vh + overflow auto (bootstrap)
 
 Tooltip out of window
 
-Refresh - how will it work
+Refresh - how will it work -done
+
+Sticky Nav - done for footer and nav
+
+To work on - shifting bus section + search bar to sticky nav
+To work on - tool tip
+
+
+CSS color templates
+https://visme.co/blog/website-color-schemes/
+
+#2E1114
+#501B1D
+#64485C
+#83677B
+#ADADAD
+
+OR
+https://palettes.shecodes.io/

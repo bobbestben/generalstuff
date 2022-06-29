@@ -1,11 +1,58 @@
-.bus-stop-section {
-    background-color: lightgray;
+.container {
+    background-color: #ececec;
 }
 
-.bus-stop-info {
+.nav-header {
+    background-color: lightslategray;
+}
+
+.search-bar {
+    background-color: gainsboro;
+}
+
+.bus-stop-section {
+    background-color: lightgray;
+    padding: 12px;
+    height: calc(100vh - 188px);
+}
+
+.info-section {
     background-color: darkgray;
+    border-bottom: 2px solid
 }
 
 .bus-stop-info p {
     font-size: 0.8em;
+}
+
+.bus-arrival-section:nth-of-type(2n) {
+    background-color: darkgrey;
+}
+
+.bus-arrival-section:nth-of-type(2n+1) {
+    background-color: silver;
+}
+
+.color-palette-test {
+    padding: 0px 12px;
+}
+
+.color-palette-test>*{
+    height: 20px;
+}
+
+.one {
+    background-color: #2E1114;
+}
+.two {
+    background-color: #501B1D;
+}
+.three {
+    background-color: #64485C;
+}
+.four {
+    background-color: #83677B;
+}
+.five {
+    background-color: #ADADAD;
 }
