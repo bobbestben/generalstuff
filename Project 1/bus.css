@@ -13,12 +13,14 @@
 .bus-stop-section {
     background-color: lightgray;
     padding: 12px;
-    height: calc(100vh - 188px);
+    height: calc(100vh - 240px);
 }
 
 .info-section {
     background-color: darkgray;
-    border-bottom: 2px solid
+    border-bottom: 2px solid;
+    padding: 12px;
+
 }
 
 .bus-stop-info p {
