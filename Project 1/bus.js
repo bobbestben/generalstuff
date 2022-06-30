@@ -3847,6 +3847,30 @@ const dataBusStop = {
 // fetchDataAsync("https://cors-anywhere.herokuapp.com/http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=83139")
 //-------------------------------------------------------------------------------------------------------
 }
+//Building the Tabs in my homepage
+const tabs = document.querySelectorAll('[data-tab-target]')
+console.log('tabs',tabs)
+
+const tabContents = document.querySelectorAll('[data-tab-content]')
+console.log('tabContents',tabContents)
+
+//Apply onclick function for each tab
+tabs.forEach(tab => {
+    tab.onclick = function() {
+        const target = document.querySelector(tab.dataset.tabTarget)
+        console.log('target',target)
+
+        //Remove "active" from all Tabs && Tab Content
+        tabContents.forEach(tabContent => tabContent.classList.remove('active'))
+        tabs.forEach(tab => tab.classList.remove('active'))
+
+        //Add "active" for the Tab && Tab Content
+        target.classList.add('active')
+        tab.classList.add('active')
+    }
+})
+
+
 
 //API Calls
 console.log('HELLO IS MY SCRIPT WORKING')
