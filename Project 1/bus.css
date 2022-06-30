@@ -4,27 +4,42 @@
 
 .nav-header {
     background-color: lightslategray;
+    cursor: pointer;
+}
+
+.nav-header>* {
+    padding: 4px 10px;
+}
+.nav-header>*:hover {
+    /* background-color: #5d6d7c;; */
+    background-color: #8896a5;
+}
+
+.nav-header .active {
+    /* background-color: #5d6d7c; */
+    /* background-color: #424d58; */
+    background-color: #576574;
 }
 
 .search-bar {
     background-color: gainsboro;
 }
 
-.bus-stop-section {
-    background-color: lightgray;
-    padding: 12px;
-    height: calc(100vh - 240px);
-}
-
 .info-section {
     background-color: darkgray;
     border-bottom: 2px solid;
-    padding: 12px;
 
 }
 
 .bus-stop-info p {
     font-size: 0.8em;
+}
+
+
+.bus-stop-section {
+    background-color: lightgray;
+    padding: 12px;
+    height: calc(100vh - 240px);
 }
 
 .bus-arrival-section:nth-of-type(2n) {
@@ -40,7 +55,7 @@
 }
 
 .color-palette-test>*{
-    height: 20px;
+    height: 15px;
 }
 
 .one {
@@ -57,4 +72,12 @@
 }
 .five {
     background-color: #ADADAD;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
 }
