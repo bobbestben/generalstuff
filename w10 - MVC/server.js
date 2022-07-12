@@ -7,12 +7,16 @@ const pokemonController = require('./controllers/pokemon_controller')
 const app = express()
 const port = 3000
 
+//Specifying the Template Engine to use - to render html page
+//Tell express which template engine to use
+//To do that need to type - npm install ejs
+app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-//Here using json response - to send response as text
-//After trying out .send/.json - looks like expres automatically detect as json data
-//but use .send in practice
+
+//Going to controller section
 app.get('/pokemon', pokemonController.listPokemon)
 
 app.listen(port, () => {
