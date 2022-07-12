@@ -1,3 +1,7 @@
+//Prior to this, npm init
+//npm install express.js
+//(nodemon already installed globally)
+
 const express = require('express')
 //Importing data from models folder
 const pokemon = require('./models/pokemon')
@@ -18,6 +22,9 @@ app.get('/', (req, res) => {
 
 //Going to controller section
 app.get('/pokemon', pokemonController.listPokemon)
+
+//Setting up show route for individual pokemon
+app.get('/pokemon/:pokemon_id', pokemonController.showPokemon)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

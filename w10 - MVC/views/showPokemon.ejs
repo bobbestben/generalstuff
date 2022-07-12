@@ -1,0 +1,24 @@
+<!--This parent folder "view" is a reserved file name, use "views" instead-->
+<!--This is EJS template, for dynamic HTML content-->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pokemon</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <% if (errMsg !== "") { %>
+            <div class="error">
+                <p>You have an error: <%= errMsg %></p>
+            </div>
+        <% } else { %>
+            <h1><%= pokemon.name %></h1>
+            <figure>
+            <img src="<%= pokemon.img %>.jpg" alt="">
+            </figure>
+        <% } %>
+    </body>
+</html>

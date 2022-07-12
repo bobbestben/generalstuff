@@ -1,5 +1,6 @@
 <!--This parent folder "view" is a reserved file name, use "views" instead-->
 <!--This is EJS template, for dynamic HTML content-->
+<!-- need to run - npm install ejs-->
 
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@
             <% pokemon.forEach( p => { %> <!--here got extra %>, serve as a new line, because EJS the html javascript code cannot go next line-->
                 <li>
                     <%= p.name %>
-                    <img src="<%=  p.img %>.jpg">
+                    <img src="<%= p.img %>.jpg">
                 </li>
             <% }) %>
         </ul>
