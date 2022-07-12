@@ -1,17 +1,24 @@
+<!--This parent folder "view" is a reserved file name, use "views" instead-->
+<!--This is EJS template, for dynamic HTML content-->
+
+
 <!DOCTYPE html>
 
 <html>
     <head>
         <title>Pokemon</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>See all the pokemon!</h1>
-        <script src="" async defer></script>
+        <h1><%= myPageTitle %></h1>
+
+        <ul>
+            <% pokemon.forEach( p => { %> <!--here got extra %>, serve as a new line, because EJS the html javascript code cannot go next line-->
+                <li>
+                    <%= p.name %>
+                    <img src="<%=  p.img %>.jpg">
+                </li>
+            <% }) %>
+        </ul>
     </body>
 </html>

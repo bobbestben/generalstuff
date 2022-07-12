@@ -11,7 +11,10 @@ const controller = {
 //but use .send in practice
     listPokemon : (req, res) => {
         // res.json(pokemon)
-        res.render('index.ejs')
+        res.render('index.ejs', {
+            myPageTitle: "See all the Pokemon, auto rendered by my controller",
+            pokemon // shortform for pokemon: pokemon
+        })
     }
 }
 
