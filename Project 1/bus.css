@@ -28,7 +28,6 @@
 .info-section {
     background-color: darkgray;
     border-bottom: 2px solid;
-
 }
 
 .bus-stop-info p {
@@ -80,4 +79,63 @@
 
 .active[data-tab-content] {
     display: block;
+}
+
+.my-tooltip {
+    position: relative;
+}
+
+
+.my-tooltip::before, .my-tooltip::after {
+    
+    /* Variables for customizing the Tooltip, as need to handle 2 elements */
+    /* Main Tooltip + Arrowhead */
+    /* Creating variable scale, for transforming when hovering */
+    --scale: 0;
+    --tooltip-color: #333;
+    --arrow-size: 15px;
+    
+    position: absolute;
+    /* Position content left of my tooltip icon */
+    left: 2.5rem;
+    transform: translateX(var(--translate-x, 0)) translateY(var(--translate-y, 0))  scale(var(--scale));
+    transition: 0.3s;
+    transform-origin: right center;
+}
+
+
+/* Main Tooltip */
+.my-tooltip::before {
+    /* Tooltip translate need account for default translation + tooltip size */
+    --translate-x : calc(-100% - var(--arrow-size));
+    --translate-y: -30%;
+
+    content: attr(data-tooltip);
+    color: #EDEADE;
+    padding: .5rem;
+    /* Makes content use full width (3 x width of tooptip icon div */
+    width: max-content;
+    max-width: 300%;
+    background: var(--tooltip-color);
+    /* Rounding the corners */
+    border-radius: 0.3rem;
+}
+
+/* Tooltip arrowhead */
+.my-tooltip::after {
+    /* Tooltip translattion = default - tooltip size */
+    --translate-x : calc(-100% + var(--arrow-size));
+
+    /* Creating my triangles */
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-left-color: #333;
+    /* Transform origin from the main Tooltip */
+    transform-origin: left center;
+}
+
+.my-tooltip:hover::before,
+.my-tooltip:hover::after {
+    --scale: 1;
+    opacity: 0.9;
 }

@@ -19,6 +19,7 @@ localStorage.setItem('todolist', JSON.stringify(complexStructure))
 const addBtn = document.querySelector('#todo-form button')
 const thingsTodoContainer = document.querySelector('#list-things-todo ul')
 const doneContainer = document.querySelector('#list-done-todo ul')
+console.log(addBtn)
 
 
 //Onclick function to add tasks
@@ -27,7 +28,6 @@ addBtn.onclick = function() {
     if (input.value === "") {
         return
     }
-
     //create li within ul, assign "pending" class
     const listItem = document.createElement('li')
     listItem.setAttribute('class','pending')

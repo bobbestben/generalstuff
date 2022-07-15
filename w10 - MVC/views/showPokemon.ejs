@@ -2,9 +2,13 @@
 <!--This is EJS template, for dynamic HTML content-->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
-<html>
+<html> -->
+
+
+    <%- include('partials/header'); -%>
+
     <head>
         <title>Pokemon</title>
         <link rel="stylesheet" href="">
@@ -20,5 +24,8 @@
             <img src="<%= pokemon.img %>.jpg" alt="">
             </figure>
         <% } %>
-    </body>
-</html>
+
+
+    <%- include('partials/footer'); -%>
+    <!-- </body>
+</html> -->

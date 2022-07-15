@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./test.css">
+    </head>
+    <body>
+
+        <p id="test" name="hacker">Hello</p>
+        <p id="test">ItsMe</p>
+        <p class="name">My name Bob</p>
+        <p class="name_two">Name is Qwerty</p>
+        
+        <script src="test.js" async defer></script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#main {
+  width: 400px;
+  height: 150px;
+  border: 1px solid #c3c3c3;
+  /* display: flex; */
+}
+
+#main div {
+  width: 70px;
+  height: 70px;
+}
+
+/* Standard syntax */
+div#myRedDIV   {order: 2;}
+div#myBlueDIV  {order: 1;}
+div#myGreenDIV {order: 1;}
+div#myPinkDIV  {order: 1;}
+</style>
+</head>
+<body>
+
+<h1>The order Property</h1>
+
+<div id="main">
+  <div style="background-color:coral;" id="myRedDIV"></div>
+  <div style="background-color:lightblue;" id="myBlueDIV"></div>
+  <div style="background-color:lightgreen;" id="myGreenDIV"></div>
+  <div style="background-color:pink;" id="myPinkDIV"></div>
+</div>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the order property.</p>
+
+<p><b>Note:</b> Safari 6.1 (and newer) supports an alternative, the -webkit-order property.</p>
+
+</body>
+</html>
