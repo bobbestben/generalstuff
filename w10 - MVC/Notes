@@ -1,0 +1,11 @@
+Why use html form - vs using Javascript to code a submit button
+- so if user presses "enter" on phone/keyboard, form is submitted
+- dont need to manually click button (its part of the design)
+- and also because its easier
+
+Note that if use html form, and type=submit
+- will be form data, need to use urlencoded
+- this is a middleware
+
+Conventional Commit
+type[scope]: <description>

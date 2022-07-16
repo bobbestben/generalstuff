@@ -1,15 +1,15 @@
 <%- include('partials/header'); -%>
 
-
 <!-- By default, form method=GET -->
 <!-- But according to REST convention, should be method=POST -->
 <!-- Also if information is sensitive eg. passwords/credentials - DO NOT USE GET request!! As will appear in header-->
 <!-- <form method="GET"> -->
 <!-- if method=POST, by default, content will be posted to the same address, meaning same page -->
 <!-- unless you specify post to where using action="" -->
+<!-- Form only has get/post, if you use PUT = invalid request, will result in default GET request -->
 <form method="POST" action="/pokemon">
     <!-- By default, if form method=GET, form input will be query parameter -->
-    <input type="text" name="pokemon_name">
+    <input type="text" name="pokemon_name" />
     <button type="submit">Create Pokemon</button>
 </form>
 <!-- All these form inputs are in form of URL encoded format -->
