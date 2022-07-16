@@ -1,0 +1,53 @@
+<!--This parent folder "view" is a reserved file name, use "views" instead-->
+<!--This is EJS template, for dynamic HTML content-->
+<!-- need to run - npm install ejs-->
+
+<!-- <!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pokemon</title>
+        <link rel="stylesheet" href="" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:3000">Home</a></li>
+                    <li><a href="http://localhost:3000/pokemon">All pokemon</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main> -->
+
+
+            <!-- Everthing above is in a partial file - header -->
+            <!-- This way we just have 1 file - pull this file whenever we need a header -->
+            <!-- Same for the footer partial -->
+            <%- include('partials/header'); -%>
+
+            <h1><%= myPageTitle %></h1>
+
+            <ul>
+                <% pokemon.forEach(( p,idx )  => { %>
+                <!--here got extra %>, serve as a new line, because EJS the html javascript code cannot go next line-->
+                <li>
+                    <%= p.name %>
+                    <!-- or can use <a href="/pokemon/<%= idx %>" relative file path-->
+                    <a href="http://localhost:3000/pokemon/<%= idx %>"
+                        ><img src="<%= p.img %>.jpg"
+                    /></a>
+                </li>
+                <% }) %>
+            </ul>
+
+            <%- include('partials/footer'); -%>
+        <!-- </main>
+
+        <footer>
+            <p>Copyright &copy; SEIF-9</p>
+        </footer>
+    </body>
+</html> -->
+
+<!-- To explore Tailwind CSS also..? -->
