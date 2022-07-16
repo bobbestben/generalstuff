@@ -34,6 +34,7 @@ const controller = {
         res.render("showPokemon.ejs", {
             pokemon: p,
             errMsg: errMsg,
+            idNum,
         });
     },
 
@@ -60,6 +61,24 @@ const controller = {
 
         // res.send('pokemon created')
         //redirect to list of pokemon page
+        res.redirect("/pokemon");
+    },
+
+    updatePokemon: (req, res) => {
+        const name = req.body.pokemon_name;
+        const ind = req.params.pokemon_id;
+        pokemon[ind].name = name;
+        console.log('req.body',req.body)
+        console.log('req.body.pokemon_name',req.body.pokemon_name)
+        console.log("Updating pokemon", req);
+        res.redirect(`/pokemon/${ind}`);
+    },
+
+    deletePokemon: (req, res) => {
+        const name = req.body.pokemon_name;
+        const ind = req.params.pokemon_id;
+        pokemon.splice(ind, 1);
+        console.log("Deleting pokemon", req);
         res.redirect("/pokemon");
     },
 };
