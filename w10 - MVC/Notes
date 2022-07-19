@@ -7,5 +7,31 @@ Note that if use html form, and type=submit
 - will be form data, need to use urlencoded
 - this is a middleware
 
-Conventional Commit
+Conventional Commit/CommunityZen (git cz)
 type[scope]: <description>
+
+Semantic Versioning
+MAJOR.MINOR.PATCH
+major - if update, code will break [feat! commits]
+minor - if code will not break [feat commits]
+patch - bug fixes [fix commits]
+
+With this convention, github can automatically generate update report via a template
+System Version,
+Whether is bug fix/feature/major update
+And also you can trace back which pull request the version came from incase code break
+
+
+
+## Mongol DB
+Row vs column databases
+You can create index for these databases, instead of using key:value pair - to speed up the querying process
+
+
+### How to Start Mongol DB
+run the unbuntu command to start the DB
+$ sudo mongod --db ~/data/db
+open new window and type mongosh - to initialize the mongo CLI environment
+More reading - data design, two-way referencing and denormalization
+
+### W10D3 Mongol Homework

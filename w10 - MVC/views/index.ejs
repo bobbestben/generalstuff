@@ -29,12 +29,11 @@
             <h1><%= myPageTitle %></h1>
 
             <ul>
-                <% pokemon.forEach(( p,idx )  => { %>
+                <% pokemon.forEach( p  => { %>
                 <!--here got extra %>, serve as a new line, because EJS the html javascript code cannot go next line-->
                 <li>
                     <%= p.name %>
-                    <!-- or can use <a href="/pokemon/<%= idx %>" relative file path-->
-                    <a href="http://localhost:3000/pokemon/<%= idx %>"
+                    <a href="http://localhost:3000/pokemon/<%= p._id %>"
                         ><img src="<%= p.img %>.jpg"
                     /></a>
                 </li>

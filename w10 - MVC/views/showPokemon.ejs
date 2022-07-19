@@ -1,47 +1,42 @@
 <!--This parent folder "view" is a reserved file name, use "views" instead-->
 <!--This is EJS template, for dynamic HTML content-->
 
-
 <!-- <!DOCTYPE html>
 
 <html> -->
 
+<%- include('partials/header'); -%>
 
-    <%- include('partials/header'); -%>
+<head>
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="" />
+</head>
+<body>
+    <!-- My route is a PUT request, im using methodOverride syntax to use the library -->
+    <!-- To change from POST to PUT request in middleware -->
+    <form method="POST" action="/pokemon/<%= pokemonID %>?_method=PUT">
+        <!-- By default, if form method=GET, form input will be query parameter -->
+        <input type="text" name="pokemon_name" />
+        <button type="submit">Update Pokemon</button>
+    </form>
 
-    <head>
-        <title>Pokemon</title>
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!-- My route is a PUT request, im using methodOverride syntax to use the library -->
-        <!-- To change from POST to PUT request in middleware -->
-        <form method="POST" action="/pokemon/<%= idNum %>?_method=PUT">
-            <!-- By default, if form method=GET, form input will be query parameter -->
-            <input type="text" name="pokemon_name">
-            <button type="submit">Update Pokemon</button>
-        </form>
+    <form method="POST" action="/pokemon/<%= pokemonID %>?_method=DELETE">
+        <!-- By default, if form method=GET, form input will be query parameter -->
+        <input type="text" name="pokemon_name" />
+        <button type="submit">Delete Pokemon</button>
+    </form>
 
-        <form method="POST" action="/pokemon/<%= idNum %>?_method=DELETE">
-            <!-- By default, if form method=GET, form input will be query parameter -->
-            <input type="text" name="pokemon_name">
-            <button type="submit">Delete Pokemon</button>
-        </form>
-
-
-
-        <% if (errMsg !== "") { %>
-            <div class="error">
-                <p>You have an error: <%= errMsg %></p>
-            </div>
-        <% } else { %>
-            <h1><%= pokemon.name %></h1>
-            <figure>
-            <img src="<%= pokemon.img %>.jpg" alt="">
-            </figure>
-        <% } %>
-
-
-    <%- include('partials/footer'); -%>
+    <% if (errMsg !== "") { %>
+    <div class="error">
+        <p>You have an error: <%= errMsg %></p>
+    </div>
+    <% } else { %>
+    <h1><%= p.name %></h1>
+    <h2><%= pokemonID %></h2>
+    <figure>
+        <img src="<%= p.img %>.jpg" alt="" />
+    </figure>
+    <% } %> <%- include('partials/footer'); -%>
     <!-- </body>
 </html> -->
+</body>
