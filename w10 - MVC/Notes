@@ -30,6 +30,7 @@ You can create index for these databases, instead of using key:value pair - to s
 
 ### How to Start Mongol DB
 run the unbuntu command to start the DB
+$ sudo mongod --db ~/data/db
 open new window and type mongosh - to initialize the mongo CLI environment
 More reading - data design, two-way referencing and denormalization
 

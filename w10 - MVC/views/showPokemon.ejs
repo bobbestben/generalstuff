@@ -14,13 +14,13 @@
 <body>
     <!-- My route is a PUT request, im using methodOverride syntax to use the library -->
     <!-- To change from POST to PUT request in middleware -->
-    <form method="POST" action="/pokemon/<%= idNum %>?_method=PUT">
+    <form method="POST" action="/pokemon/<%= pokemonID %>?_method=PUT">
         <!-- By default, if form method=GET, form input will be query parameter -->
         <input type="text" name="pokemon_name" />
         <button type="submit">Update Pokemon</button>
     </form>
 
-    <form method="POST" action="/pokemon/<%= idNum %>?_method=DELETE">
+    <form method="POST" action="/pokemon/<%= pokemonID %>?_method=DELETE">
         <!-- By default, if form method=GET, form input will be query parameter -->
         <input type="text" name="pokemon_name" />
         <button type="submit">Delete Pokemon</button>
@@ -31,9 +31,10 @@
         <p>You have an error: <%= errMsg %></p>
     </div>
     <% } else { %>
-    <h1><%= pokemon.name %></h1>
+    <h1><%= p.name %></h1>
+    <h2><%= pokemonID %></h2>
     <figure>
-        <img src="<%= pokemon.img %>.jpg" alt="" />
+        <img src="<%= p.img %>.jpg" alt="" />
     </figure>
     <% } %> <%- include('partials/footer'); -%>
     <!-- </body>
