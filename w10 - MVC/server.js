@@ -3,6 +3,7 @@
 //(nodemon already installed globally)
 //npm install body-parser
 //sometimes url can be binary, encoded, json - can use body parser to do something
+//npm installed methodoverrider locally
 
 const express = require("express");
 //Importing data from models folder
@@ -43,7 +44,7 @@ app.get("/pokemon/new", pokemonController.newPokemonForm);
 
 //Setting up show route for individual pokemon
 app.get("/pokemon/:pokemon_id", pokemonController.showPokemon);
-//update action - POST request
+//update action - Put request
 app.put("/pokemon/:pokemon_id", pokemonController.updatePokemon);
 //delete action - delete request
 app.delete("/pokemon/:pokemon_id", pokemonController.deletePokemon);
@@ -54,6 +55,3 @@ app.post("/pokemon", pokemonController.createPokemon);
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
-
-//How to Refactor This?
-//Create new folder -> Routes

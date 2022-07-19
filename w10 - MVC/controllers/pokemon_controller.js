@@ -15,6 +15,14 @@ const controller = {
             pokemon, // shortform for pokemon: pokemon
         });
     },
+    //can do like this too, like in classes you write function, no need write as an object
+    // listPokemon (req, res) => {
+    //     // res.json(pokemon)
+    //     res.render("index.ejs", {
+    //         myPageTitle: "See all the Pokemon, auto rendered by my controller",
+    //         pokemon, // shortform for pokemon: pokemon
+    //     });
+    // },
     showPokemon: (req, res) => {
         const pokemonID = req.params.pokemon_id;
 
