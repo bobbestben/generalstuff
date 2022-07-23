@@ -1,0 +1,16 @@
+Trying out new tool - Mongoose
+Previously: Request made -> Routes -> Controller -> DB
+Now: Request made -> Routes -> Middleware(for authentication purposes) -> Controller
+
+where we can put authentication logic in middleware, instead of in controller, 
+especially if you have many controllers
+
+Mongoose is an ODM - object document model
+raw daw from database -> mongoose turns into more useful model(meaning with extended functionalities)
+extra functionalities such as validation, querying
+
+Mongoose - quick start - npm install mongoose --save
+
+Schema - mongoose concept
+set of blue prints/format which data can be entered
+so that you cannot anyhow update data, with extra keyvalue pair, wrong type integer/string etc.
