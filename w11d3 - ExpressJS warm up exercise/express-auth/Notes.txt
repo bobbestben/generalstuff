@@ -1,0 +1,49 @@
+Authentiation vs Authorization
+- logging vs access rights
+
+Passwords MUST NOTbe stored in DB in plaintext
+- hash it before storing / encryption
+
+Hash
+- one way
+- in combination with salt 
+- you can get the key, but you can't reverse engineer the key to get back original password
+
+Hasing Algos - brypt / SHA256
+
+Encryption
+- given plaintext and a secret key/string
+- use the key and encrpyt to form a ciphertext
+- we can use the same secret key to reverse and get the original plaintext
+- asymmetric vs symmetric encrpytion
+
+Examples of encrpytion algos?
+- RSA
+- access- JDES
+
+Rainbow Tables?
+- dictionary of plaintext password to hashedform
+- quick hashing
+
+eg. Twitter
+-> send a username and password request (login)
+-> Secured via SSL -> data is encrpyted
+-> Man-in-the-middle attack -> he intercept the traffic, and examines the request data
+-> he can't temper because encrpyted
+
+-> server can see username and password in plaintext
+
+-> apply hashing to password
+
+->compare password if match user password in DB
+
+Session -> stores some login info at backend
+Where are sessions stored?
+Cookie -> the frontend counterpart of sessions
+
+Session + Cookies
+
+Browser -> sends user/login request
+        <- Server sends Cookie(sessionID) to Browser
+Browser -> sends authentication request with Cookie (sessionID)
+        <- Server sends response if authentication is ok

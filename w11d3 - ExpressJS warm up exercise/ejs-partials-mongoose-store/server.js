@@ -16,8 +16,8 @@ const PORT            = process.env.PORT || 3000;
 //Database
 //___________________
 
-// mongoURI = process.env.MONGOURI ||'mongodb://localhost/karolin_mongoose_store'
-mongoURI = process.env.MONGOURI || `mongodb+srv://bobbest:wangweijie@generalassembly.imxw3.mongodb.net/?retryWrites=true&w=majority`
+mongoURI = process.env.MONGOURI ||'mongodb://localhost/karolin_mongoose_store'
+// mongoURI = process.env.MONGOURI || `mongodb+srv://bobbest:wangweijie@generalassembly.imxw3.mongodb.net/?retryWrites=true&w=majority`
 
 //connect to this database - don't forget to start `mongod`
 mongoose.connect( mongoURI );

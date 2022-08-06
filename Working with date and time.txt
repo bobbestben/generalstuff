@@ -1,0 +1,7 @@
+2022-07-28T11:14:16.720Z
+This format usually see
+Date, then T .... Z is the UTC time zone + 0
+Convert to SGT - + 8 hrs
+
+Can work with inbuild javascript method Date
+or use Luxon library

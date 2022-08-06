@@ -2,6 +2,7 @@
 const productModel = require("../../models/products/products");
 //importing validator
 const productValidators = require("../validators/products");
+const productRatingModel = require("../../models/ratings/ratings")
 
 const controller = {
     createProduct: async (req, res) => {
@@ -18,7 +19,7 @@ const controller = {
 
         if (validationResults.error) {
             res.send("validation error occured");
-            console.log(validationResults);
+            console.log(validationResults.error);
             return;
         }
 
@@ -40,6 +41,8 @@ const controller = {
             console.log(err);
         }
 
+
+        // todo: redirect to products page
         res.send("asd");
     },
 
@@ -55,7 +58,16 @@ const controller = {
 
     getProduct: async(req, res) => {
         const product = await productModel.findById(req.params.product_id)
-        res.render('products/show', {product})
+        
+        //Here ratings - making use of the _id reference
+        //To interact with different models/DB
+        //Ratings for individual product is in another DB
+        //now is listing down all the ratings
+        const ratings = await productRatingModel.find({product_id: req.params.product_id})
+
+        //todo: aggregation of ratings
+
+        res.render('products/show', {product, ratings})
     }
 };
 
