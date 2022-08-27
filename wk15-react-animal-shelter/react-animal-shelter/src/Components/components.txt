@@ -1,0 +1,12 @@
+Components we want to create:
+- animals
+- animals
+- navbar
+- footer
+- card
+- pagination
+- image
+- filter
+
+We run $npm i sass
+for easier CSS styling syntax
