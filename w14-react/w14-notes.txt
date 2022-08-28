@@ -1,0 +1,29 @@
+React - good for single page application
+The way it works - when you click some thing and the page reacts,
+it does not reload the whole page, but only that section
+- makes pages/navigating smooth
+
+
+$ npm start  - to run application
+when this command run - it loads the key:value pair script in package.json
+
+If wanna use yarn - delete package.json and node_modules
+
+$ yarn install
+a new package.json file will be installed
+- eslintConfig - help check for code errors - missing ; or something
+
+
+How does React page load?
+
+In public -> index.html -> loads a <div id=root></div>
+
+Then in index.js -> root elment with id="root" is defined here -> which renders App.js
+
+So all your components render in App.js
+
+
+## Require vs Import
+
+Require is a Node specific syntax - need node.js
+import is native syntax in latest JS version ES6

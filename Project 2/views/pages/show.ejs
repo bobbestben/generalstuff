@@ -1,0 +1,49 @@
+<%- include('../partials/header'); %>
+
+<div class="mb-3" id="page-home">
+
+    <div id="homepage-cover">
+
+        <div class="container">
+            <% if (carpark) { %>
+            <h3 class="show-header mt-3">
+                <%= carpark.Development + ' (CP ' + carpark.CarParkID + ' )' %>
+            </h3>
+            <h5 class="mt-3">
+                <%= 'Available Lots: ' + carpark.AvailableLots %>
+            </h5>
+            <% } %>
+
+            <h5 class="mt-3">Pricing:</h5>
+
+            <% if (pricing) { %>
+            <p><%= pricing.pricing %></p>
+            <p>Contributed by: <%= pricing.name %></p>
+            <a
+                href="/<%= carpark.CarParkID %>/edit"
+                class="btn btn-primary me-2"
+                >Edit Price Info</a
+            >
+            <% } else { %>
+            <p>
+                No pricing Available. Click the button below if you'd like to
+                contribute!
+            </p>
+            <a href="/<%= carpark.CarParkID %>/new" class="btn btn-primary me-2"
+                >Add Price Info</a
+            >
+            <% } %>
+
+            <button type="button" class="btn btn-secondary me-2">Upvote</button>
+            <button type="button" class="btn btn-secondary me-2">
+                Downvote
+            </button>
+           11
+            >
+        </div>
+
+    </div>
+    
+</div>
+
+<%- include('../partials/footer'); %>

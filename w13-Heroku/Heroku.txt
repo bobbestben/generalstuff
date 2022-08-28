@@ -1,0 +1,43 @@
+How to deploy Heroku
+Link to github account -> Deploy
+Connect to repository
+Automatic Deploy - connect to main branch, then automatic deploy
+(automatically update after each commit)
+
+Manual deploy once - then it will configure the 
+runtime environment, node_modules, dependencies, npm
+
+Then Open App
+
+Error? Check Activity Logs
+Activity > Activity Feed > Build Log > No error? Build process is ok
+Open App - More - > View logs
+>Failed to connect to DB
+>because .env file not in heroku app, cant get user n pass to connect to DB
+
+Engine specification and procfile
+https://devcenter.heroku.com/articles/nodejs-support
+1. Specifying node.js and npm version
+Check current version in terminal
+$ node --version
+$ npm --version
+Then in paste below in package.json file
+"engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  }
+
+  .x is for minor version is ok, as long as major version specified
+Check Activity > build log for version installed after deploy
+
+2. Runtime behaviour - specify instruction/commands to start application
+eg. we type nodemon / npm start
+create a procfile in directory, copy paste web: npm start
+if omit this procfile, heroku will do guess work to guess its node.js
+
+
+3. Deployed to Heroku - cannot specify port in server.js
+-port = process.env.PORT, assign env variable
+
+4. App - Settings - Config Vars - reveal config variable
+put in your .env varaibles here as key value pair
