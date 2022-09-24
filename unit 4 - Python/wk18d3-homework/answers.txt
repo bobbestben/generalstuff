@@ -1,0 +1,22 @@
+1. What is a nested loop?
+
+A loop inside a loop.
+Something like an inner counter and outer counter.
+
+2. Which kind of loop is based on a conditional statement: while loops or for loops?
+
+While loop.
+
+3. When you want to iterate a specific number of times, would you typically use a while loop or a for loop?
+
+For loop - you know when you want it to end
+
+4. Is it possible to loop through a string one letter at a time? What is the example given in the article?
+
+Yes.
+for i in range(len(string)):
+    string[i] ...
+
+5. Extrapolate from what you learned in the articles: Do you think a for loop can be nested inside a while loop? Why or why not?
+
+Yes, just loop nesting.
