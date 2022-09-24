@@ -17,7 +17,13 @@ def mostPopularWord(word_list):
       hashmap[word]+=1
     else:
       hashmap[word] = 1
-  popular_word = max(hashmap, key=hashmap.get)
+  hashmap_keys = list(hashmap.keys())
+  hashmap_values = list(hashmap.values())
+  index = hashmap_values.index(
+    max(hashmap_values)
+  )
+  popular_word = hashmap_keys[index]
+  # popular_word = max(hashmap, key=hashmap.get)
   print(f"Most popular word is {popular_word} and it appears {hashmap[popular_word]} times!")
   
 mostPopularWord(words)
@@ -63,3 +69,27 @@ mostPopularWord(words)
 #     times = f'{count} times'
 
 #   print(f'The letter {char} appears in my name {times}')
+
+# words = [
+#   "hello",
+#   "water",
+#   "hello"
+# ]
+
+# def mostPopularWord(words):
+#   words_dict = {}
+#   for word in words:
+#     if word not in words_dict:
+#       words_dict[word] = 1
+#     else:
+#       words_dict[word] += 1
+
+#   words_dict_keys = list(words_dict.keys())
+#   words_dict_vals = list(words_dict.values())
+#   index = words_dict_vals.index(
+#     max(words_dict_vals)
+#   )
+
+#   return words_dict_keys[index]
+
+# print(mostPopularWord(words))
