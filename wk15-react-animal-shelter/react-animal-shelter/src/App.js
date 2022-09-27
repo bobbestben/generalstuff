@@ -1,13 +1,22 @@
 // import {useEffect} from 'react';
 // Install npm-react-router
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import Animals from './Components/Animals/Animals';
-import Animal from './Components/Animal/Animal';
+import AnimalDetails from './Components/Animal/AnimalDetails';
+import EditAnimalDetails from './Components/Animal/EditAnimalDetails';
+import SiteHeader from './Components/Partials/SiteHeader';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+import Auth from './Components/Auth/Auth';
+import Guest from './Components/Auth/Guest';
+
 // npm install bootstrap & inert cdn link
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -21,49 +30,20 @@ function App() {
   //       console.log(jsonData)
   //     })
   // }, [])
-
   return (
     <div className="App">
-      <h1>Welcome to React Router!</h1>
+      <SiteHeader />
 
       <Routes>
-        <Route path="/" element={<Animals/>} />
-        <Route path="/123" element={<Animal/>} />
-        <Route path="/321" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/" element={<Animals />} />
+        <Route path="/animals/:animalId" element={<AnimalDetails />} />
+        <Route path="/animals/:animalId/edit" element={<Auth component={EditAnimalDetails} />} />
+        <Route path="/register" element={<Guest component={Register} />} />
+        <Route path="/login" element={<Guest component={Login} />} />
       </Routes>
+
+      <ToastContainer />
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
-      </main>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-    </>
-  );
-}
-
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
   );
 }
 

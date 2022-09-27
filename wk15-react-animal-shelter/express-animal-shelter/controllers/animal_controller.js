@@ -49,4 +49,62 @@ module.exports = {
             return res.json({error: `Fail to get animal of id ${animalId}`})
         }
     },
+    updateAnimal: async (req, res) => {
+        // do validation...
+
+        const animalId = req.params.id
+
+        let animal = null
+
+        try {
+            animal = await animalModel.findById(animalId)
+        } catch (err) {
+            res.status(500)
+            return res.json({ error: `Fail to get animal of id ${animalId}` })
+        }
+
+        if (!animal) {
+            res.status(404)
+            return res.json(animal)
+        }
+
+        try {
+            await animal.updateOne(req.body)
+        } catch (err) {
+            res.status(500)
+            return res.json({error: "failed to update animal"})
+        }
+
+        // if error, json cannot return empty string, need put as object
+        return res.json({})
+    },
+
+    deleteAnimal: async (req, res) => {
+        // do validation...
+
+        const animalId = req.params.id
+
+        let animal = null
+
+        try {
+            animal = await animalModel.findById(animalId)
+        } catch (err) {
+            res.status(500)
+            return res.json({ error: `Fail to get animal of id ${animalId}` })
+        }
+
+        if (!animal) {
+            res.status(404)
+            return res.json(animal)
+        }
+
+        try {
+            await animal.delete()
+        } catch (err) {
+            console.log(err)
+            res.status(500).json({error: "failed to delete animal"})
+        }
+
+        return res.json()
+    },
 }

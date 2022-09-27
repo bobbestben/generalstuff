@@ -5,3 +5,11 @@ Convert to SGT - + 8 hrs
 
 Can work with inbuild javascript method Date
 or use Luxon library
+
+
+MONGO_URI2=mongodb+srv://bobbest:wangweijie@generalassembly.imxw3.mongodb.net/?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://smellycat:Password123@cluster0.xfyzdqw.mongodb.net/?retryWrites=true&w=majority
+# MONGO_LOCAL_URI=mongodb://localhost:27017/whats_upp
+
+JWT_SECRET=14631d1937b69a02e8d99acda9f39a1e6bce7d350e9983dd107ba520ee5d3966696cf70189b6565e4a7182cc7cb59bff1cf76f6fd791a26ac117bbda8bd74425
+JWT_EXPIRY=10min

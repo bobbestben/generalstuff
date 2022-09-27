@@ -4,22 +4,26 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const animalRouter = require('./routers/animal_routes')
+const userRouter = require('./routers/user_routes')
 
 const app = express()
 const port = process.env.PORT || 8000
 const connStr = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_HOST}?retryWrites=true&w=majority`
 
+app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 // CORS error only occur on browser
 // A module to determine which domain your access comes from
 // this CORS module mean request from any domain can access to server
 app.use(cors({
+    origin: '*'
     // this specifies which url origin you allow
     // if dont specify = all allowed
     // origin: 'http://localhost:3000'
 }))
 
 app.use('/api/v1/animals', animalRouter)
+app.use('/api/v1/users', userRouter)
 
 app.listen(port, async () => {
     try {

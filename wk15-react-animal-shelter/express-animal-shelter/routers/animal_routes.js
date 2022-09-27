@@ -11,4 +11,8 @@ router.get('/:id', animalController.show)
 
 router.post('/', animalController.createAnimal)
 
+router.patch('/:id', animalController.updateAnimal)
+
+router.delete('/:id', animalController.deleteAnimal)
+
 module.exports = router

@@ -20,7 +20,7 @@ function Animals() {
 
   console.log('animalsList: ', animalsList)
 
-  const animalCard = animalsList.map( animal => (<AnimalCard key={animal._id} data={animal} />))
+  const animalCard = animalsList.map( animal => (<AnimalCard key={animal._id} data={animal} showViewButton={true} />))
 
   return (
     <div className={styles['animals-container']}>
