@@ -1,0 +1,53 @@
+If download a python project, install dependency with $ pipenv install
+
+Create folder djano-starter
+Cd to folder
+start virtual environment:pipenv install Django
+
+pipfile.lock pipfile -- this is the dependencies
+
+sudo apt install libpq-dev python3-dev
+pip install psycopg2 -- this is for postgresSQL
+
+use $ pip list
+to check for installations
+
+
+Enter the python shell $ pipenv shell
+
+Create the main project:
+django-admin startproject tunr_django . # Do not forget the 'dot' at the end.
+
+then create the sub appliations:
+django-admin startapp tunr
+
+In tunr_django, the asgi, urls, wsgi.py is like server.js
+
+tuner models > create the model, django helps generate the schema > use command apply migration to DB
+
+### DB Settings: tunr_django > settings.py > Database settings
+https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-DATABASES
+
+### Installed applications: tunr_django > settings.py > Installed Apps -> your tunr.app can put here
+sesions, authentication, etc. 
+
+Run server: $ python3 manage.py runserver
+
+tunr > models > define models here
+https://docs.djangoproject.com/en/4.1/ref/models/fields/#bigintegerfield
+
+Works like Nodemon - changes will auto restart server
+
+After creating your models:
+create DB in postgres
+then
+python3 manage.py makemigrations
+
+To access django admin console
+create an account first:
+python3 manage.py createsuperuser
+bobbest
+123456
+
+Access admin dashboard at localhosturl/admin
+

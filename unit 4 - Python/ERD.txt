@@ -1,0 +1,60 @@
+MVP
+
+user has many posts: one to zero or many
+user has many comments: one to zero or many
+
+post has many comments: only one to zero or many
+post belongs to user: many to only one
+
+comments belong to post: many to only one
+comment belongs to user: one to only one
+
+user has many favourite posts: one to zero or many
+user has many liked posts: one to zero or many
+user has many liked comments: one to zero or many
+
+user has many friends: one to zero or many
+friends belong to user: many to one
+
+comment has many sub comments: only one to zero or many
+sub comment belongs to comment: only one many to one
+
+1NF - duplicate data, eg. 2nd phone number put in 2nd row
+
+2NF - split into another table
+
+3NF - duplicate result - manage via splitting table, store as a reference
+      one employee ID (PK) to employee zip code(FK), multiple employee can have same zip code
+      employee zip code (PK) to one address (FK)
+      Cardinal relationsihp: employee table to zip code table - zero or many to only one
+
+https://www.javatpoint.com/dbms-tutorial 
+
+https://www.javatpoint.com/acid-properties-in-dbms
+
+
+E-Commerce ERD
+
+user buy many variants
+user can be an admin
+user as an admin can upload products and variants
+user as admin can upload categories and brands
+user can add variatns to categoriesuser can view past orders
+
+
+many to many relationship need joint table because of PK
+
+variants
+(PK)blackshirt cart1(FK)
+blue shirt cart2
+blackshirt cart2 (cant do this because variant is PK)
+
+joint table
+
+variant_cart
+PK(just an id)
+FK variant id
+FK cart id
+
+cart
+PK(id)
