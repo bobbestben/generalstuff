@@ -24,6 +24,7 @@ django-admin startapp tunr
 In tunr_django, the asgi, urls, wsgi.py is like server.js
 
 tuner models > create the model, django helps generate the schema > use command apply migration to DB
+pytohn3 manage.py migrate tunr zero   ----> will undo the migration
 
 ### DB Settings: tunr_django > settings.py > Database settings
 https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-DATABASES
@@ -50,4 +51,21 @@ bobbest
 123456
 
 Access admin dashboard at localhosturl/admin
+
+
+Install PIP and pipenv 
+--install pip module
+sudo apt-get update
+sudo apt-get install python3-pip
+python3 -m pip install --user pipx
+sudo apt install pipenv
+sudo apt-get install libpq-dev   (for psycog2)
+pipenv install psycopg2
+
+
+How to speed up SQL query? use indexing
+skip the first 100 rows ->check the next 100 rows
+
+
+
 
