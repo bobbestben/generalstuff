@@ -58,3 +58,12 @@ FK cart id
 
 cart
 PK(id)
+
+Cannot have many to many tables - not possible to do in code
+need a middle table to join them
+many to one, one to many = many to many
+
+
+SQL injection - = vs @
+sequelize already take care when passing an object, injection is @
+https://www.w3schools.com/sql/sql_injection.asp
